@@ -1,5 +1,6 @@
 //jshint esversion:6
-
+require('dotenv').config();
+const { CLUSTER_PASS } = process.env;
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose")
@@ -14,7 +15,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb://127.0.0.1/todoListDB')
+mongoose.connect(`mongodb+srv://facundoaragon:${CLUSTER_PASS}@cluster0.ab3p0xf.mongodb.net/todoListDB`)
 .then(()=>console.log("Database connected"))
 .catch((err)=>console.log(err))
 
