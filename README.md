@@ -8,9 +8,5 @@
 <h4>- Deleting</h4>
 <h6>Check the checkbox to delete an item</h6>
 
-<ul>
-    <li>
-        <h4>Creating new Lists</h4>
-    </li>
-</ul>
+<h4>Creating new Lists</h4>
 <h6>Write a new Route and a new list will be created with de Route name</h6>
